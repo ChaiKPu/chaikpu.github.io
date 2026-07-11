@@ -1,172 +1,290 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
+    <!-- Framebuster: Prevent iframe loading (Clickjacking defense) -->
+    <script>
+        if (self !== top) {
+            top.location = self.location;
+        }
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Chaitanya Purandare | Security Consultant</title>
-    <meta property="og:image" content="assets/img/android-chrome-512x512.png">
-    <meta property="og:type" content="website">
-    <meta name="description" content="I help secure systems and applications across organizations.">
+    <title>Projects & Research | Chaitanya Purandare</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Cybersecurity portfolio of Chaitanya Purandare. Details of professional threat modeling, secure code reviews, penetration testing projects, and academic security research.">
+    
+    <!-- Favicons -->
     <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="180x180" href="assets/img/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="assets/img/android-chrome-192x192.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="assets/img/android-chrome-512x512.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amita">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IM+Fell+Great+Primer+SC">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    
+    <!-- External Fonts & Icons -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
-    <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
-    <link rel="stylesheet" href="assets/css/Features-Boxed.css">
-    <link rel="stylesheet" href="assets/css/Footer-Clean.css">
-    <link rel="stylesheet" href="assets/css/Highlight-Clean.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.2.0/aos.css">
-    <link rel="stylesheet" href="assets/css/Navigation-Clean.css">
+    
+    <!-- Custom Style Sheet -->
     <link rel="stylesheet" href="assets/css/styles.css">
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-156333669-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-156333669-1');
-</script>
 </head>
 
 <body>
-    <nav class="navbar navbar-light navbar-expand-md navigation-clean" style="background-color: rgb(13,9,55);color: rgb(255,255,255);">
-        <div class="container"><a class="navbar-brand" data-toggle="tooltip" data-bs-tooltip="" data-placement="bottom" data-bs-hover-animate="pulse" href="index.html" style="font-weight: bold;font-style: normal;letter-spacing: 4px;color: rgb(251,151,0);font-family: Amita, cursive;"
-                title="Chaitanya Ketan Purandare"><i class="fas fa-pen-nib" style="color: rgb(255,214,0);"></i>cpurandare</a><button data-toggle="collapse" class="navbar-toggler bg-light" data-target="#navcol-1" style="background-color: #6f6f6f;"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-            <div
-                class="collapse navbar-collapse" id="navcol-1">
-                <ul class="nav navbar-nav ml-auto">
-                    <li class="nav-item" role="presentation"><a class="nav-link" style="color: #dfe8ee;" href="index.html">About Me</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="projects.html" style="color: #dfe8ee;">Projects</a></li>
-                    <li class="nav-item" role="presentation"></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link visible" data-toggle="tooltip" data-bs-tooltip="" data-placement="bottom" href="/blog/" style="color: #dfe8ee;">Blog</a></li>
-                </ul>
-        </div>
+    <!-- NAVIGATION BAR -->
+    <nav class="navbar-custom">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-shield-alt"></i> cpurandare
+            </a>
+            <ul class="navbar-nav">
+                <li><a class="nav-link" href="index.html#about">About</a></li>
+                <li><a class="nav-link" href="index.html#expertise">Expertise</a></li>
+                <li><a class="nav-link" href="index.html#experience">Experience</a></li>
+                <li><a class="nav-link active" href="projects.html">Projects</a></li>
+                <li><a class="nav-link" href="/blog/">Blog</a></li>
+                <li><a class="nav-link" href="index.html#contact">Contact</a></li>
+            </ul>
         </div>
     </nav>
-    <div class="features-boxed" style="background-color: rgb(0,0,0);margin-top: 5px;">
-        <div class="container">
-            <div>
-                <h3 style="color: rgb(252,5,5);padding-top: 10px;font-family: 'IM Fell Great Primer SC', serif;"><img class="img-fluid" src="assets/img/NEU_logo.png" style="width: 100px;">Northeastern University</h3>
-            </div>
-            <div class="intro"></div>
-            <div class="row justify-content-center features" style="padding-top: 10px;padding-bottom: 0;">
-                <div class="col-sm-9 col-md-10 col-lg-8 item"><iframe allowfullscreen="" frameborder="0" src="https://www.youtube.com/embed/m1xMgH-AHh8" height="315" style="width: 95%;"></iframe></div>
-            </div>
-            <div class="row justify-content-center features" style="padding-top: 10px;padding-bottom: 0;">
-                <div class="col-sm-7 col-md-5 col-lg-5 item">
-                    <div class="box">
-                        <h3 class="name">Semester 2 - Spring 2020</h3>
-                        <div>
-                            <ul class="list-unstyled text-left">
-                                <li></li>
-                                <li><a href="https://drive.google.com/file/d/1yDB_jZogEZdi7XRckYzFibxHDqlZZEAf/view?usp=sharing" target="_blank">DOS Attack Simulation - Wordpress CVE 2014-9034</a></li>
-                                <li><a href="https://drive.google.com/file/d/19Wo28gBgdadrwsOg6oHJsI6AaDB8embC/view?usp=sharing" target="_blank">An approach towards docker forensics&nbsp;</a></li>
-                                <li><a href="https://drive.google.com/file/d/1XXmBVQbwafjLFzcFhJvaG6wF_ESXVr-7/view?usp=sharing" target="_blank">ARP Poisoning</a></li>
-                            </ul>
+
+    <!-- PAGE HEADER -->
+    <section class="container" style="padding-top: 4rem; padding-bottom: 2rem;">
+        <div class="section-title-wrap" style="text-align: left; margin-bottom: 2.5rem;">
+            <span class="section-subtitle">Showcase</span>
+            <h1 class="section-title" style="font-size: 2.5rem; padding-bottom: 0.5rem; display: inline-block;">Security Projects & Research</h1>
+        </div>
+        <p style="font-size: 1.1rem; max-width: 800px; margin-bottom: 3rem;">
+            A collection of professional consulting engagements, cybersecurity tool integrations, academic forensic research, and community contributions.
+        </p>
+    </section>
+
+    <!-- SECTION 1: PROFESSIONAL ENGAGEMENTS -->
+    <section class="container" style="margin-bottom: 5rem;">
+        <div class="section-title-wrap" style="text-align: left; margin-bottom: 2.5rem;">
+            <span class="section-subtitle">Ultraviolet Cyber / Synopsys</span>
+            <h2 class="section-title" style="font-size: 1.8rem;">Professional Engagements</h2>
+        </div>
+
+        <div class="projects-grid">
+            <!-- Project 1: MeshClaw LLM Audit Bot -->
+            <div class="project-card">
+                <div class="project-media">
+                    <!-- Icon or placeholder graphic since we don't have video/image -->
+                    <div style="font-size: 4rem; color: var(--accent);"><i class="fas fa-robot"></i></div>
+                </div>
+                <div class="project-content">
+                    <h3>MeshClaw Bot & Custom LLM Skills</h3>
+                    <p>Designed and integrated an automated Slack/CI-CD companion bot that interfaces with custom LLM prompts to analyze source code repositories during manual audits. It filters false positives, detects structural anti-patterns, and speeds up triage times by 4-8 hours per client engagement.</p>
+                    <div class="project-meta">
+                        <div class="skill-tags">
+                            <span class="skill-tag">LLM Prompting</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">Static Code Analysis</span>
+                            <span class="skill-tag">DevSecOps</span>
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-7 col-md-5 col-lg-5 item">
-                    <div class="box">
-                        <h3 class="name">Semester 1 - Fall 2019</h3>
-                        <div>
-                            <ul class="list-unstyled text-left">
-                                <li></li>
-                                <li><a href="https://drive.google.com/file/d/1FhwnBZjE9UwZhu2nYk0yFMQYHKVhbNcZ/view?usp=sharing" target="_blank">Network Architecture</a></li>
-                                <li><a href="https://drive.google.com/file/d/1TkAP3n7oXRdscI2P376cdj_gFspKtjCr/view?usp=sharing" target="_blank">Incidence Response</a></li>
-                                <li><a href="https://drive.google.com/file/d/1JBfV4gO9Ks8lvxVMgHBUi3e3g50yeC1G/view?usp=sharing" target="_blank">Case Study: Data and Privacy Breach</a></li>
-                            </ul>
+            </div>
+
+            <!-- Project 2: Cloud CERT-IN Auditor -->
+            <div class="project-card">
+                <div class="project-media">
+                    <div style="font-size: 4rem; color: var(--accent-terminal);"><i class="fas fa-network-wired"></i></div>
+                </div>
+                <div class="project-content">
+                    <h3>CERT-IN Compliance Architecture</h3>
+                    <p>Led a technical team of 8 security assessors executing end-to-end vulnerability scans, penetration testing, and policy checks for an enterprise cloud provider client. Standardized level-of-effort estimation metrics and authored formal Statement of Work templates for audit handovers.</p>
+                    <div class="project-meta">
+                        <div class="skill-tags">
+                            <span class="skill-tag">CERT-IN</span>
+                            <span class="skill-tag">Compliance Mapping</span>
+                            <span class="skill-tag">Team Leadership</span>
+                            <span class="skill-tag">SOW Authoring</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3: Healthcare Threat Modeling -->
+            <div class="project-card">
+                <div class="project-media">
+                    <div style="font-size: 4rem; color: var(--accent);"><i class="fas fa-heartbeat"></i></div>
+                </div>
+                <div class="project-content">
+                    <h3>Healthcare Service Threat Model</h3>
+                    <p>Partnered with a healthcare client's security architects to outline detailed data flows and model potential entry points. Designed threat matrices for microservices, identified critical network configuration flaws, and advised on policy adjustments to align with strict HIPAA regulations.</p>
+                    <div class="project-meta">
+                        <div class="skill-tags">
+                            <span class="skill-tag">Threat Modeling</span>
+                            <span class="skill-tag">HIPAA</span>
+                            <span class="skill-tag">Security Architecture</span>
+                            <span class="skill-tag">AWS Config</span>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div style="background-color: #e3e3e3;">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 text-center" style="margin: 5px;background-color: #e3e3e3;">
-                    <div><iframe allowfullscreen="" frameborder="0" src="https://www.youtube.com/embed/6YsykHCU-cI" height="340px" width="90%"></iframe>
-                        <h3 class="text-left d-lg-flex align-items-lg-center" style="color: rgb(106,6,1);padding-top: 10px;font-family: 'IM Fell Great Primer SC', serif;"><img class="img-fluid flex-shrink-1" src="assets/img/SPIT_Logo.png" style="width: 100px;">Sardar Patel Institute of Technology</h3>
+    </section>
+
+    <!-- SECTION 2: ACADEMIC & RESEARCH PROJECTS -->
+    <section class="container" style="margin-bottom: 5rem;">
+        <div class="section-title-wrap" style="text-align: left; margin-bottom: 2.5rem;">
+            <span class="section-subtitle">Northeastern University</span>
+            <h2 class="section-title" style="font-size: 1.8rem;">Academic & Cybersecurity Research</h2>
+        </div>
+
+        <div class="projects-grid">
+            <!-- Project 4: Wordpress CVE Simulation -->
+            <div class="project-card">
+                <div class="project-media">
+                    <!-- YouTube video embed -->
+                    <iframe src="https://www.youtube.com/embed/m1xMgH-AHh8" title="WordPress CVE 2014-9034 DOS Simulation" allowfullscreen></iframe>
+                </div>
+                <div class="project-content">
+                    <h3>WordPress CVE 2014-9034 Simulation</h3>
+                    <p>Designed a local virtual environment to simulate a denial-of-service (DoS) attack exploiting WordPress CVE 2014-9034. Developed security analysis report on mitigation techniques, focusing on server-side rate-limiting and PHP configuration hardening.</p>
+                    <div class="project-meta">
+                        <div class="project-links">
+                            <a href="https://drive.google.com/file/d/1yDB_jZogEZdi7XRckYzFibxHDqlZZEAf/view?usp=sharing" target="_blank" class="project-link">
+                                <i class="fas fa-file-pdf"></i> Read Analysis Paper
+                            </a>
+                        </div>
+                        <div class="skill-tags" style="margin-top: 0.5rem;">
+                            <span class="skill-tag">CVE Exploit</span>
+                            <span class="skill-tag">WordPress Hardening</span>
+                            <span class="skill-tag">DoS Prevention</span>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <div>
-                        <h5 class="text-center">Hand Gesture Recognition for Windows OS, July 2017</h5>
+
+            <!-- Project 5: Docker Forensics -->
+            <div class="project-card">
+                <div class="project-media">
+                    <div style="font-size: 4rem; color: var(--accent);"><i class="fab fa-docker"></i></div>
+                </div>
+                <div class="project-content">
+                    <h3>Docker Forensics & Analysis</h3>
+                    <p>Conducted research on forensic methods to analyze containerized environments post-compromise. Focused on reconstructing container states, inspecting layer diffs, recovering deleted socket structures, and auditing docker daemon logs.</p>
+                    <div class="project-meta">
+                        <div class="project-links">
+                            <a href="https://drive.google.com/file/d/19Wo28gBgdadrwsOg6oHJsI6AaDB8embC/view?usp=sharing" target="_blank" class="project-link">
+                                <i class="fas fa-file-pdf"></i> Read Forensic Guide
+                            </a>
+                        </div>
+                        <div class="skill-tags" style="margin-top: 0.5rem;">
+                            <span class="skill-tag">Docker Forensics</span>
+                            <span class="skill-tag">Container Logs</span>
+                            <span class="skill-tag">Incident Response</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 6: ARP Poisoning & Network Audits -->
+            <div class="project-card">
+                <div class="project-media">
+                    <div style="font-size: 4rem; color: var(--accent);"><i class="fas fa-search-minus"></i></div>
+                </div>
+                <div class="project-content">
+                    <h3>Network Security Audits & ARP Testing</h3>
+                    <p>Designed structured reports analyzing ARP Poisoning simulations, network routing configuration weaknesses, and overall incident response parameters. Includes detailed analysis of privacy breach case studies.</p>
+                    <div class="project-meta">
+                        <div class="project-links">
+                            <a href="https://drive.google.com/file/d/1XXmBVQbwafjLFzcFhJvaG6wF_ESXVr-7/view?usp=sharing" target="_blank" class="project-link">
+                                <i class="fas fa-file-pdf"></i> ARP Guide
+                            </a>
+                            <a href="https://drive.google.com/file/d/1FhwnBZjE9UwZhu2nYk0yFMQYHKVhbNcZ/view?usp=sharing" target="_blank" class="project-link">
+                                <i class="fas fa-file-pdf"></i> Network Arch
+                            </a>
+                            <a href="https://drive.google.com/file/d/1TkAP3n7oXRdscI2P376cdj_gFspKtjCr/view?usp=sharing" target="_blank" class="project-link">
+                                <i class="fas fa-file-pdf"></i> Incident Response
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div style="background-color: #e3e3e3;">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <h5>Description</h5>
-                    <p style="font-size: 15px;">Computer-vision based application for Windows OS developed using Visual Studio. It featured techniques such as edge detection, contour extraction and color recognition combined to interpret finger count detection to interact with specific
-                        application such as MS PowerPoint.&nbsp;</p>
-                </div>
-                <div class="col-md-6 text-left">
-                    <h5>Team Members</h5>
-                    <p style="font-size: 15px;">Ferina Patel, Jigar Gala, Chaitanya Purandare</p>
-                    <h5>Academic Mentor</h5>
-                    <p><a href="http://itsa.spit.ac.in/faculty.html#Teacher11">Prof. Nikhat Kazi</a></p>
-                </div>
-            </div>
+    </section>
+
+    <!-- SECTION 3: UNDERGRADUATE & ALUMNI CONTRIBUTIONS -->
+    <section class="container" style="margin-bottom: 6rem;">
+        <div class="section-title-wrap" style="text-align: left; margin-bottom: 2.5rem;">
+            <span class="section-subtitle">Engineering & Community</span>
+            <h2 class="section-title" style="font-size: 1.8rem;">Engineering & Alumni Contributions</h2>
         </div>
-    </div>
-    <div style="background-color: #e3e3e3;">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <h3>Alumini Contribution</h3>
-                    <p class="text-left"><strong>Guest Lecture: </strong>May 2020,&nbsp;<a href="https://drive.google.com/file/d/1vIvFI14TZJdU0f6BCHVLBFWAAWm0dHj6/view?usp=sharing">Introduction to Web Application Security<br></a></p>
+
+        <div class="projects-grid">
+            <!-- Project 7: Hand Gesture Recognition -->
+            <div class="project-card">
+                <div class="project-media">
+                    <iframe src="https://www.youtube.com/embed/6YsykHCU-cI" title="Hand Gesture Recognition Demo" allowfullscreen></iframe>
                 </div>
-            </div>
-        </div>
-    </div>
-    <div style="margin-top: 8px;background-color: #6a3e13;">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <h3 style="color: rgb(255,169,40);font-family: 'IM Fell Great Primer SC', serif;"><a href="haveeka.com" style="color: rgb(255,175,20);" target="_blank"><br><img class="rounded img-fluid" src="assets/img/Haveeka_logo.PNG" style="width: 120px;margin-right: 5px;">Haveeka, Pravid food product<br></a></h3>
-                    <p style="color: rgb(255,255,255);">Haveeka is a small scale entrepreneurship started by Mrs. Pradnya Purandare, which is prominent in preserving the taste of Maharashtrian style food preparations.</p>
-                    <p style="color: rgb(255,255,255);">My contribution towards Haveeka is to create and maintain its website while promoting its products via digital marketing platforms.</p>
-                    <p style="color: rgb(255,255,255);">Visit the site for more information:&nbsp;<a href="https://haveeka.com" style="color: rgb(255,175,20);">https://haveeka.com</a></p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="footer-clean" style="padding-top: 10px;padding-bottom: 10px;">
-        <footer>
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-3 item social"><a href="mailto:purandare.c@husky.neu.edu"><i class="icon ion-email" style="color: rgb(0,0,0);"></i></a><a href="https://in.linkedin.com/in/cpurandare"><i class="icon ion-social-linkedin" style="color: rgb(21,79,137);"></i></a><a href="https://www.youtube.com/channel/UCZxptypgE8uJi4I_26p1jIg"><i class="icon ion-social-youtube" style="color: rgb(255,3,3);"></i></a>
-                        <a
-                            data-toggle="tooltip" data-bs-tooltip="" href="https://www.snapchat.com/add/chaitanya7227" title="chaitanya7227" style="background-color: #0d0937;"><i class="icon ion-social-snapchat" style="color: rgb(255,245,0);"></i></a>
+                <div class="project-content">
+                    <h3>Hand Gesture Recognition for Windows</h3>
+                    <p>Computer-vision application for Windows OS using C++ and OpenCV. Featured custom algorithms for real-time edge detection, contour extraction, and finger count detection to execute presentation triggers (e.g. MS PowerPoint slides).</p>
+                    <div class="project-meta">
+                        <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.5rem;">
+                            <strong>Team:</strong> Ferina Patel, Jigar Gala, Chaitanya Purandare<br>
+                            <strong>Academic Mentor:</strong> Prof. Nikhat Kazi (Sardar Patel Institute of Technology)
+                        </p>
+                        <div class="skill-tags">
+                            <span class="skill-tag">OpenCV</span>
+                            <span class="skill-tag">C++</span>
+                            <span class="skill-tag">Computer Vision</span>
+                        </div>
                     </div>
                 </div>
             </div>
-        </footer>
-    </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/bs-init.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.2.0/aos.js"></script>
-    <script src="assets/js/framebuster.js"></script>
+
+            <!-- Project 8: Haveeka Website Development -->
+            <div class="project-card">
+                <div class="project-media">
+                    <img src="assets/img/Haveeka_logo.PNG" alt="Haveeka Food Products Logo" style="object-fit: contain; padding: 1.5rem;">
+                </div>
+                <div class="project-content">
+                    <h3>Haveeka Web Platform & Marketing</h3>
+                    <p>Developed and launched the web commerce platform for Haveeka, a small-scale Maharashtrian food product entrepreneurship. Manage ongoing SEO optimization, domain configuration, security patching, and digital marketing strategies.</p>
+                    <div class="project-meta">
+                        <div class="project-links">
+                            <a href="https://haveeka.com" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Visit Site
+                            </a>
+                        </div>
+                        <div class="skill-tags" style="margin-top: 0.5rem;">
+                            <span class="skill-tag">Web Development</span>
+                            <span class="skill-tag">Digital Marketing</span>
+                            <span class="skill-tag">SEO Patching</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 9: Guest Lecture App Sec -->
+            <div class="project-card">
+                <div class="project-media">
+                    <div style="font-size: 4rem; color: var(--accent-terminal);"><i class="fas fa-chalkboard-teacher"></i></div>
+                </div>
+                <div class="project-content">
+                    <h3>Guest Lecture: Intro to Web App Security</h3>
+                    <p>Delivered an introductory webinar in May 2020 for undergraduate IT students. Discussed basic threat categories (SQLi, XSS, CSRF), the OWASP Top 10 framework, secure cookie flags, and modern defense strategies.</p>
+                    <div class="project-meta">
+                        <div class="project-links">
+                            <a href="https://drive.google.com/file/d/1vIvFI14TZJdU0f6BCHVLBFWAAWm0dHj6/view?usp=sharing" target="_blank" class="project-link">
+                                <i class="fas fa-file-pdf"></i> View Slides
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Chaitanya Purandare. All rights reserved. System Status: <span class="text-terminal glow-text-terminal">SECURE</span></p>
+        </div>
+    </footer>
 </body>
 
 </html>

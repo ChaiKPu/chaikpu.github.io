@@ -1,181 +1,574 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
+    <!-- Framebuster: Prevent iframe loading (Clickjacking defense) -->
+    <script>
+        if (self !== top) {
+            top.location = self.location;
+        }
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Chaitanya Purandare | Security Consultant</title>
+    <title>Chaitanya Purandare | Senior Cybersecurity Consultant</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Senior Security Consultant with 7+ years of experience securing enterprise applications, cloud architectures, and AI services. Expertise in VAPT, threat modeling, and DevSecOps.">
+    <meta name="keywords"
+        content="cybersecurity, security consultant, penetration testing, threat modeling, VAPT, Synopsys, KPMG, AWS security, application security, cloud security">
+
+    <!-- Open Graph Metadata -->
+    <meta property="og:title" content="Chaitanya Purandare | Senior Cybersecurity Consultant">
+    <meta property="og:description"
+        content="Senior Security Consultant specializing in securing enterprise systems, cloud architecture, and AI models.">
     <meta property="og:image" content="assets/img/android-chrome-512x512.png">
     <meta property="og:type" content="website">
-    <meta name="description" content="I help secure systems and applications across organizations.">
+    <meta property="og:url" content="https://app-sec.net/">
+
+    <!-- Favicons -->
     <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="180x180" href="assets/img/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="assets/img/android-chrome-192x192.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="assets/img/android-chrome-512x512.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amita">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IM+Fell+Great+Primer+SC">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
-    <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
-    <link rel="stylesheet" href="assets/css/Features-Boxed.css">
-    <link rel="stylesheet" href="assets/css/Footer-Clean.css">
-    <link rel="stylesheet" href="assets/css/Highlight-Clean.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.2.0/aos.css">
-    <link rel="stylesheet" href="assets/css/Navigation-Clean.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-156333669-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
 
-  gtag('config', 'UA-156333669-1');
-</script>
+    <!-- External Fonts & Icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+
+    <!-- Custom Style Sheet -->
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
 <body>
-    <nav class="navbar navbar-light navbar-expand-md navigation-clean" style="background-color: rgb(13,9,55);color: rgb(255,255,255);">
-        <div class="container"><a class="navbar-brand" data-toggle="tooltip" data-bs-tooltip="" data-placement="bottom" data-bs-hover-animate="pulse" href="index.html" style="font-weight: bold;font-style: normal;letter-spacing: 4px;color: rgb(251,151,0);font-family: Amita, cursive;"
-                title="Chaitanya Ketan Purandare"><i class="fas fa-pen-nib" style="color: rgb(255,214,0);"></i>cpurandare</a><button data-toggle="collapse" class="navbar-toggler bg-light" data-target="#navcol-1" style="background-color: #6f6f6f;"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-            <div
-                class="collapse navbar-collapse" id="navcol-1">
-                <ul class="nav navbar-nav ml-auto">
-                    <li class="nav-item" role="presentation"><a class="nav-link" style="color: #dfe8ee;" href="index.html">About Me</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="projects.html" style="color: #dfe8ee;">Projects</a></li>
-                    <li class="nav-item" role="presentation"></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link visible" data-toggle="tooltip" data-bs-tooltip="" data-placement="bottom" href="/blog/" style="color: #dfe8ee;" >Blogs</a></li>
-                </ul>
-        </div>
+    <!-- NAVIGATION BAR -->
+    <nav class="navbar-custom">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-shield-alt"></i> cpurandare
+            </a>
+            <ul class="navbar-nav">
+                <li><a class="nav-link active" href="#about">About</a></li>
+                <li><a class="nav-link" href="#expertise">Expertise</a></li>
+                <li><a class="nav-link" href="#experience">Experience</a></li>
+                <li><a class="nav-link" href="projects.html">Projects</a></li>
+                <li><a class="nav-link" href="/blog/">Blog</a></li>
+                <li><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
         </div>
     </nav>
-    <div class="hero-blue" style="padding: 20px;">
-        <div class="row">
-            <div class="col-sm-6 col-md-5 col-lg-4 offset-sm-3 offset-lg-0 offset-xl-0"><img class="img-fluid" src="assets/img/profile_pic.png"></div>
-            <div class="col-sm-12 col-lg-7">
-                <div>
-                    <h2 style="text-align: center;color: #ffffff;font-family: Amita, cursive;">Chaitanya K. Purandare</h2>
-                    <h3 style="text-align: center;color: rgb(255,255,255);font-family: 'IM Fell Great Primer SC', serif;border-style: none;border-bottom-style: solid;">An aspiring security consultant</h3>
-                    <p class="text-center" style="padding-top: 10px;font-size: 20px;color: rgb(255,255,255);text-align: left;"><i class="fas fa-user-shield"></i>&nbsp;<strong>2 Years+</strong> demonstrated experience<br><i class="icon ion-android-checkmark-circle" style="color: rgb(255,255,255);border-style: none;"></i>&nbsp;Proactively protect your IT assets<br>
-                        <i
-                            class="icon ion-android-checkmark-circle" style="color: rgb(255,255,255);border-color: rgb(255,255,255);"></i>&nbsp;Effective communication with stakeholders<br><i class="icon ion-android-checkmark-circle"></i>&nbsp;Understanding of OWASP Top 10<br><i class="icon ion-android-checkmark-circle"></i>&nbsp;Automate scans and tasks<br><br>
-                            <a
-                                class="btn btn-outline" href="https://drive.google.com/file/d/1nWPcGyuZVPBa2k7NzwJt8R04Od6Fp27-/view?usp=sharing" style="color: rgb(255,255,255);border-style: solid;border-color: rgb(255,255,255);border-radius: 20px;margin-right: 20px;">View Resume</a><a class="btn btn-outline" href="https://aspen.eccouncil.org/VerifyBadge?type=certification&amp;a=67hiCsbjkJtBR2pyVLcbsSfFTa/E2YxfNcje2OauFsY=" style="color: rgb(255,255,255);border-style: solid;border-color: rgb(255,255,255);border-radius: 20px;">CEH v10</a><br></p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div style="background: url(assets/img/wave.svg) top / cover no-repeat;">
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="about">
         <div class="container">
-            <div class="row">
-                <div class="col-sm-9 col-md-8 col-lg-4 offset-sm-2 offset-md-2 offset-lg-0"><img class="img-fluid" src="assets/img/report_svg.svg"></div>
-                <div class="col-12 col-md-12 col-lg-8 offset-0 highlight-clean" style="background-color: rgba(255,255,255,0.94);padding-left: 15px;padding-right: 15px;">
-                    <div class="intro">
-                        <h2 class="text-center" style="border-bottom-style: solid;">Work Status</h2>
-                        <h4><i class="fa fa-check" style="color: rgb(49,193,55);"></i>&nbsp;Available for full-time opportunities in US</h4>
-                        <h5>- Software Security Intern : Synopsys (Summer 2020)<br>- Associate Consultant : KPMG (2017-2019)</h5>
-                        <p class="text-center"></p>
-                    </div>
-                    <div class="buttons"><a class="btn btn-primary" href="projects.html"><i class="icon ion-document-text"></i>&nbsp;View Projects</a><a class="btn" style="background-color: rgb(203,30,30);color: rgb(255,255,255);" href="mailto:purandare.c@husky.neu.edu"><i class="icon ion-email"></i>&nbsp;Email</a>
-                        <a
-                            class="btn btn-primary" href="https://in.linkedin.com/in/cpurandare" style="background-color: rgb(1,102,162);"><i class="fa fa-linkedin-square"></i>&nbsp;Linked IN</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="border rounded-0 features-boxed" style="margin-top: 8px;margin-bottom: 8px;">
-        <div class="container">
-            <div class="intro">
-                <h2 class="text-center" style="padding-top: 38px;font-size: 24px;margin-bottom: 0px;">EXPERIENCE AND SKILLS</h2>
-            </div>
-            <div class="row justify-content-center features" style="padding-top: 20px;">
-                <div class="col-sm-6 col-md-5 col-lg-4 item">
-                    <div data-aos="fade-right" class="box"><i class="icon ion-email-unread icon"></i>
-                        <h3 class="name" style="padding-top: 25px;">Phishing</h3>
-                        <p class="text-center description">Test your company's cyber awareness and incident response by sending crafted emails targetted to gather sensitive data</p>
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <span class="hero-tagline">Initializing Security Protocol</span>
+                    <h1>Chaitanya Ketan Purandare</h1>
+                    <h2 class="text-accent" style="font-size: 1.5rem; font-weight: 500; margin-bottom: 1.5rem;">Senior
+                        Cybersecurity Consultant</h2>
+                    <p class="hero-desc">
+                        Senior Security Consultant with <strong>7+ years of experience</strong> securing enterprise
+                        applications and cloud services. Expert in VAPT, threat modeling, secure code review, and cloud
+                        configuration reviews. Focused on shifting security left and translating complex technical risk
+                        into actionable engineering guidance.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#contact" class="btn-cyber btn-cyber-secondary">
+                            <i class="fas fa-envelope"></i> Contact Consultant
+                        </a>
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-5 col-lg-4 item">
-                    <div data-aos="fade-down" class="box"><i class="fa fa-bug icon"></i>
-                        <h3 class="name">Vulnerability Assessment</h3>
-                        <p class="description">Comprehensive vulnerability assessment and tracking of your internal and external assets using professional tools and reports</p>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-5 col-lg-4 item">
-                    <div data-aos="fade-left" class="box"><i class="fab fa-weebly icon"></i><i class="fab fa-weebly icon"></i><i class="fab fa-weebly icon"></i>
-                        <h3 class="name">Web-Application Security Testing</h3>
-                        <p class="description">Black-Box, Gray-Box testing of the web applications against OWASP and other business flaws</p>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-5 col-lg-4 item">
-                    <div data-aos="zoom-in-right" class="box"><i class="fa fa-check-square-o icon"></i>
-                        <h3 class="name">Configuration Review</h3>
-                        <p class="description">Perform an assessment of the OS/DB/Network device &nbsp;configurations based on benchmarks such as CIS or the organization defined baseline</p>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-5 col-lg-4 item">
-                    <div data-aos="zoom-in-up" class="box"><i class="fa fa-wifi icon"></i>
-                        <h3 class="name">Wi-Fi Security Assessment</h3>
-                        <p class="description" style="margin-bottom: 0px;">Assess the wireless communication perimeters against misconfigurations, rouge access points, network segregation, WPA or WPA2 authentication protocols etc.</p>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-5 col-lg-4 item">
-                    <div class="text-center box" data-aos="zoom-in-left"><i class="fa fa-code border-primary icon"></i>
-                        <h3 class="name">Coding Skills</h3>
-                        <div>
-                            <div class="table-responsive" style="font-size: 14px;">
-                                <table class="table table-sm">
-                                    <thead>
-                                        <tr>
-                                            <th>HTML, CSS</th>
-                                            <th>Expert</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td class="text-left"><strong>C, Java, C#,&nbsp;JS</strong></td>
-                                            <td><strong>Advanced</strong></td>
-                                        </tr>
-                                        <tr>
-                                            <td><strong>Python</strong></td>
-                                            <td><strong>Beginner</strong></td>
-                                        </tr>
-                                        <tr>
-                                            <td><strong>Bash</strong></td>
-                                            <td><strong>Beginner</strong></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                <div class="terminal-wrapper">
+                    <div class="terminal">
+                        <div class="terminal-header">
+                            <div class="terminal-buttons">
+                                <span class="terminal-btn red"></span>
+                                <span class="terminal-btn yellow"></span>
+                                <span class="terminal-btn green"></span>
                             </div>
+                            <span class="terminal-title">cpurandare@security-node:~</span>
+                        </div>
+                        <div class="terminal-body" id="terminal-body">
+                            <div class="terminal-line"><span class="terminal-prompt">guest@app-sec.net:~$</span> <span
+                                    id="typed-cmd"></span><span class="terminal-cursor"></span></div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="footer-clean" style="padding-top: 10px;padding-bottom: 10px;">
-        <footer>
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-3 item social"><a href="mailto:purandare.c@husky.neu.edu"><i class="icon ion-email" style="color: rgb(0,0,0);"></i></a><a href="https://in.linkedin.com/in/cpurandare"><i class="icon ion-social-linkedin" style="color: rgb(2,78,154);"></i></a><a href="https://www.youtube.com/channel/UCZxptypgE8uJi4I_26p1jIg"><i class="icon ion-social-youtube" style="color: rgb(255,3,3);"></i></a>
-                        <a
-                            data-toggle="tooltip" data-bs-tooltip="" href="https://www.snapchat.com/add/chaitanya7227" title="chaitanya7227" style="background-color: #0d0937;"><i class="icon ion-social-snapchat" style="color: rgb(255,245,0);"></i></a>
+    </section>
+
+    <!-- STATS / IMPACT SECTION -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">7+</div>
+                    <div class="stat-label">Years Cyber Experience</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">2,500+</div>
+                    <div class="stat-label">IPs Assessed & Secured</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">200+</div>
+                    <div class="stat-label">Web & Mobile Audits</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">6+</div>
+                    <div class="stat-label">Industry Sectors Catered</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CORE EXPERTISE SECTION -->
+    <section class="container" id="expertise" style="margin-bottom: 6rem;">
+        <div class="section-title-wrap">
+            <span class="section-subtitle">What I Do</span>
+            <h2 class="section-title">Core Cybersecurity Expertise</h2>
+        </div>
+
+        <div class="skills-grid">
+            <!-- Skill Card 1 -->
+            <div class="skill-card">
+                <div class="skill-icon"><i class="fas fa-bug"></i></div>
+                <h3>VAPT & Pen-Testing</h3>
+                <p>Comprehensive vulnerability assessment and penetration testing across web applications, mobile apps,
+                    network devices, and wireless perimeters to identify vulnerabilities before attackers do.</p>
+                <div class="skill-tags">
+                    <span class="skill-tag">Burp Suite Pro</span>
+                    <span class="skill-tag">OWASP</span>
+                    <span class="skill-tag">Nmap</span>
+                    <span class="skill-tag">Metasploit</span>
+                </div>
+            </div>
+
+            <!-- Skill Card 2 -->
+            <div class="skill-card">
+                <div class="skill-icon"><i class="fas fa-code"></i></div>
+                <h3>Secure Code Review & AI</h3>
+                <p>Analyzing codebase structure for security anti-patterns. Implemented customized LLM guardrails and
+                    automation tools to optimize code audits and reduce threat false positives.</p>
+                <div class="skill-tags">
+                    <span class="skill-tag">MeshClaw Bot</span>
+                    <span class="skill-tag">LLM Testing</span>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">Secure SDLC</span>
+                </div>
+            </div>
+
+            <!-- Skill Card 3 -->
+            <div class="skill-card">
+                <div class="skill-icon"><i class="fas fa-cloud"></i></div>
+                <h3>Cloud Security & DevOps</h3>
+                <p>Hardening cloud infrastructures (AWS), orchestrating secure setups for containerized microservices,
+                    IAM policies, and automating audits using infrastructure-as-code.</p>
+                <div class="skill-tags">
+                    <span class="skill-tag">AWS GuardDuty</span>
+                    <span class="skill-tag">Docker</span>
+                    <span class="skill-tag">Kubernetes</span>
+                    <span class="skill-tag">CloudFormation</span>
+                </div>
+            </div>
+
+            <!-- Skill Card 4 -->
+            <div class="skill-card">
+                <div class="skill-icon"><i class="fas fa-project-diagram"></i></div>
+                <h3>Threat Modeling & Risk</h3>
+                <p>Partnering with security architecture teams to model complex services, mapping architecture-level
+                    security gaps, and recommending tailored remediation blueprints.</p>
+                <div class="skill-tags">
+                    <span class="skill-tag">Threat Modeling</span>
+                    <span class="skill-tag">HIPAA</span>
+                    <span class="skill-tag">Agile Security</span>
+                    <span class="skill-tag">Remediation</span>
+                </div>
+            </div>
+
+            <!-- Skill Card 5 -->
+            <div class="skill-card">
+                <div class="skill-icon"><i class="fas fa-users-cog"></i></div>
+                <h3>Social Engineering</h3>
+                <p>Designing and executing controlled phishing simulations to evaluate employee cybersecurity awareness
+                    and enterprise resilience, logging metrics for training.</p>
+                <div class="skill-tags">
+                    <span class="skill-tag">Phishing Drills</span>
+                    <span class="skill-tag">Campaign Design</span>
+                    <span class="skill-tag">Social Engineering</span>
+                </div>
+            </div>
+
+            <!-- Skill Card 6 -->
+            <div class="skill-card">
+                <div class="skill-icon"><i class="fas fa-clipboard-check"></i></div>
+                <h3>Compliance & Frameworks</h3>
+                <p>Reviewing configuration rules against CIS Benchmarks, auditing systems for CERT-IN compliance
+                    guidelines, and enforcing HIPAA security measures.</p>
+                <div class="skill-tags">
+                    <span class="skill-tag">CERT-IN</span>
+                    <span class="skill-tag">CIS Benchmarks</span>
+                    <span class="skill-tag">HIPAA</span>
+                    <span class="skill-tag">IT Audits</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROFESSIONAL TIMELINE SECTION -->
+    <section class="container" id="experience">
+        <div class="section-title-wrap">
+            <span class="section-subtitle">Professional Progression</span>
+            <h2 class="section-title">Employment History</h2>
+        </div>
+
+        <div class="timeline">
+            <!-- Timeline Item 1 -->
+            <div class="timeline-item">
+                <span class="timeline-dot"></span>
+                <div class="timeline-header">
+                    <h3 class="timeline-role">Senior Security Consultant & Tech Lead</h3>
+                    <div class="timeline-company">
+                        <i class="fas fa-building"></i> Ultraviolet Cyber (Synopsys, BlackDuck)
+                    </div>
+                    <span class="timeline-date">June 2021 – Present | Boston, USA</span>
+                </div>
+                <div class="timeline-body">
+                    <ul>
+                        <li><strong>Tech Lead for Cloud Services Client:</strong> Scoped cybersecurity requirements,
+                            estimated level of effort, authored Statements of Work (SOW), and coordinated resourcing.
+                        </li>
+                        <li><strong>Compliance Team Leadership:</strong> Led a team of 8 security assessors through a
+                            complex CERT-IN compliance audit, conducting technical peer reviews of all final security
+                            deliverables.</li>
+                        <li><strong>Advanced Penetration Testing:</strong> Executed complex Web, API, and Code Review
+                            security assessments as primary assessor using manual and automated verification techniques.
+                        </li>
+                        <li><strong>Automation & AI Integration:</strong> Designed and implemented MeshClaw bot and
+                            custom LLM prompts to accelerate secure code audits, saving 4-8 hours of manual testing
+                            overhead per project.</li>
+                        <li><strong>Healthcare Threat Modeling:</strong> Partnered with healthcare security architects
+                            to perform comprehensive threat modeling, advising on controls to align with HIPAA
+                            requirements.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Timeline Item 2 -->
+            <div class="timeline-item">
+                <span class="timeline-dot"></span>
+                <div class="timeline-header">
+                    <h3 class="timeline-role">Associate Consultant in Risk Consulting</h3>
+                    <div class="timeline-company">
+                        <i class="fas fa-building"></i> KPMG
+                    </div>
+                    <span class="timeline-date">June 2017 – July 2019 | Mumbai, India</span>
+                </div>
+                <div class="timeline-body">
+                    <ul>
+                        <li><strong>Large-scale VAPT:</strong> Performed comprehensive vulnerability assessments and
+                            penetration testing across 2,500+ corporate IP addresses, tracking flaws from discovery to
+                            remediation.</li>
+                        <li><strong>App Security Audit:</strong> Assessed over 50 dynamic web and mobile applications
+                            following the standard OWASP testing methodology.</li>
+                        <li><strong>Phishing Campaigns:</strong> Engineered and conducted targeted phishing campaigns
+                            for over 2,000 corporate employees, including VP and Director-level officers, achieving a
+                            47% click-through metrics report.</li>
+                        <li><strong>Network Audits:</strong> Evaluated configurations of Cisco switches, routers, and
+                            telecommunication network nodes against standard CIS benchmark hardening baselines.</li>
+                        <li><strong>Wireless Security:</strong> Conducted physical Wi-Fi penetration tests to discover
+                            hidden SSIDs and obtain WPA handshakes through target de-authentication methods.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EDUCATION & CERTIFICATIONS -->
+    <section class="container" style="margin-bottom: 6rem;">
+        <div class="section-title-wrap">
+            <span class="section-subtitle">Credentials</span>
+            <h2 class="section-title">Education & Certifications</h2>
+        </div>
+
+        <div class="edu-cert-grid">
+            <div class="edu-list">
+                <!-- Edu Card 1 -->
+                <div class="edu-card">
+                    <img class="edu-logo" src="assets/img/NEU_logo.png" alt="Northeastern University Logo">
+                    <div class="edu-details">
+                        <h4>Master of Science in Cyber Security</h4>
+                        <span class="edu-inst">Northeastern University, Boston, MA</span>
+                        <div class="edu-meta">Sept 2019 – May 2021 | GPA: 3.875 / 4.00</div>
+                        <div class="edu-courses">
+                            <strong>Relevant Work:</strong> Computer & System Security, Network Security, Forensic
+                            Analysis, Machine Learning in Cybersecurity, Capstone Project: Honey-Pot Network
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Edu Card 2 -->
+                <div class="edu-card">
+                    <img class="edu-logo" src="assets/img/SPIT_Logo.png" alt="University of Mumbai Logo">
+                    <div class="edu-details">
+                        <h4>Bachelor of Engineering in Information Technology</h4>
+                        <span class="edu-inst">University of Mumbai, Mumbai, India</span>
+                        <div class="edu-meta">2013 – 2017 | CGPA: 7.44 / 10.00</div>
+                        <div class="edu-courses">
+                            <strong>Relevant Work:</strong> Object Oriented Programming, Software Engineering, System &
+                            Web Security Open Source Technologies, Computer Networks
+                        </div>
                     </div>
                 </div>
             </div>
-        </footer>
-    </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/bs-init.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.2.0/aos.js"></script>
-    <script src="assets/js/framebuster.js"></script>
+
+            <!-- Certification Box -->
+            <div class="cert-card">
+                <img class="cert-badge" src="assets/img/CEH_Badge.png" alt="CEH Certification Badge">
+                <h3 class="cert-title">Certified Ethical Hacker (CEH) v10</h3>
+                <span class="cert-org">EC-Council</span>
+                <span class="cert-date">Credential ID: ECC849204859<br>Jan 2019 – Jan 2025</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXTRA CURRICULARS -->
+    <section class="container">
+        <div class="extra-section">
+            <div class="section-title-wrap" style="margin-bottom: 2rem;">
+                <span class="section-subtitle">Beyond Security Checks</span>
+                <h2 class="section-title" style="font-size: 1.8rem;">Interests & Activities</h2>
+            </div>
+            <div class="extra-grid">
+                <!-- Card 1 -->
+                <div class="extra-card">
+                    <div class="extra-icon"><i class="fas fa-flag"></i></div>
+                    <h4>Capture The Flag</h4>
+                    <p>Regularly participating in local and global CTF competitions to sharpen VAPT and reverse
+                        engineering skills.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="extra-card">
+                    <div class="extra-icon"><i class="fas fa-camera"></i></div>
+                    <h4>Wildlife Photography</h4>
+                    <p>Passionate self-taught wildlife photographer, capturing the intricate textures of ecosystems in
+                        natural habitats.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="extra-card">
+                    <div class="extra-icon"><i class="fas fa-coffee"></i></div>
+                    <h4>Coffee Enthusiast</h4>
+                    <p>Deeply interested in coffee brewing chemistry, exploring specialty single-origin espresso roasts.
+                    </p>
+                </div>
+                <!-- Card 4 -->
+                <div class="extra-card">
+                    <div class="extra-icon"><i class="fas fa-pen-fancy"></i></div>
+                    <h4>Fountain Pens</h4>
+                    <p>Collector of classic mechanical fountain pens, appreciating precision nib grinds and custom inks.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="contact-wrap">
+                <div class="section-title-wrap">
+                    <span class="section-subtitle">Secure Comms</span>
+                    <h2 class="section-title">Get in Touch</h2>
+                </div>
+                <p>Have an upcoming security assessment, cloud migration review, or threat modeling engagement? Connect
+                    directly for professional advisory services.</p>
+
+                <div class="contact-links">
+                    <a href="mailto:cp@app-sec.net" class="contact-btn email-btn">
+                        <i class="fas fa-envelope"></i> cp@app-sec.net
+                    </a>
+                    <a href="https://in.linkedin.com/in/cpurandare" target="_blank" class="contact-btn linkedin-btn">
+                        <i class="fab fa-linkedin"></i> linkedin.com/in/cpurandare
+                    </a>
+                    <a href="https://instagram.com/cp.snaps" target="_blank" class="contact-btn instagram-btn">
+                        <i class="fab fa-instagram"></i> cp.snaps
+                    </a>
+                    <a href="https://app-sec.net/" target="_blank" class="contact-btn">
+                        <i class="fas fa-globe"></i> app-sec.net
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Chaitanya Purandare. All rights reserved. System Status: <span
+                    class="text-terminal glow-text-terminal">SECURE</span></p>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE TERMINAL SCRIPT -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const terminalBody = document.getElementById("terminal-body");
+            const typedCmdSpan = document.getElementById("typed-cmd");
+
+            const commandText = "ssh guest@app-sec.net";
+            let cmdIndex = 0;
+
+            // Simulated commands and diagnostic outputs
+            const logSequence = [
+                { type: "input", text: "ssh guest@app-sec.net" },
+                { type: "log", text: "Connecting to app-sec.net (198.51.100.42) on port 22..." },
+                { type: "log", text: "Welcome to Chaitanya's Security Hub v2026.07" },
+                { type: "log", text: "Security clearance: LEVEL-3 (GUEST)" },
+                { type: "prompt", text: "guest@app-sec.net:~$ " },
+                { type: "input", text: "sec_audit --summary" },
+                { type: "log", text: "[+] Performing system integrity audits..." },
+                { type: "log", text: "[PASS] Cloud Config Reviews: AWS IAM hardened." },
+                { type: "log", text: "[PASS] LLM Prompt Testing: MeshClaw bot active." },
+                { type: "log", text: "[PASS] Compliance: CERT-IN requirements checklist verified." },
+                { type: "log", text: "[+] Fetching cybersecurity consultant overview..." },
+                {
+                    type: "json", text: `{
+  "consultant": "Chaitanya Purandare",
+  "experience": "7+ Years (Senior Level)",
+  "specialties": [
+    "VAPT & Pen-Testing",
+    "Threat Modeling",
+    "Secure Code Reviews"
+  ],
+  "location": "Boston, MA"
+}` },
+                { type: "prompt", text: "guest@app-sec.net:~$ " },
+                { type: "input", text: "echo 'Safe browsing!'" },
+                { type: "log", text: "Safe browsing!" },
+                { type: "prompt", text: "guest@app-sec.net:~$ " }
+            ];
+
+            // Simulates typing the initial command
+            function typeCommand() {
+                if (cmdIndex < commandText.length) {
+                    typedCmdSpan.textContent += commandText.charAt(cmdIndex);
+                    cmdIndex++;
+                    setTimeout(typeCommand, 60);
+                } else {
+                    // Remove cursor from input and start printing diagnostic lines
+                    setTimeout(() => {
+                        // Remove input line blinking cursor wrapper structure
+                        const cursor = document.querySelector(".terminal-cursor");
+                        if (cursor) cursor.remove();
+
+                        // Start writing sequence lines
+                        runSequence(1);
+                    }, 500);
+                }
+            }
+
+            function runSequence(index) {
+                if (index >= logSequence.length) return;
+
+                const item = logSequence[index];
+                const lineDiv = document.createElement("div");
+                lineDiv.className = "terminal-line";
+
+                if (item.type === "prompt") {
+                    const promptSpan = document.createElement("span");
+                    promptSpan.className = "terminal-prompt";
+                    promptSpan.textContent = item.text;
+                    lineDiv.appendChild(promptSpan);
+
+                    // If it is the very last line, add input cursor
+                    if (index === logSequence.length - 1) {
+                        const cursorSpan = document.createElement("span");
+                        cursorSpan.className = "terminal-cursor";
+                        lineDiv.appendChild(cursorSpan);
+                    }
+
+                    terminalBody.appendChild(lineDiv);
+                    scrollToBottom();
+                    setTimeout(() => runSequence(index + 1), 200);
+                }
+                else if (item.type === "input") {
+                    // Typewriter for subsequent command inputs
+                    const promptSpan = document.createElement("span");
+                    promptSpan.className = "terminal-prompt";
+                    promptSpan.textContent = logSequence[index - 1].type === "prompt" ? "" : "guest@app-sec.net:~$ ";
+                    lineDiv.appendChild(promptSpan);
+
+                    const textSpan = document.createElement("span");
+                    lineDiv.appendChild(textSpan);
+                    terminalBody.appendChild(lineDiv);
+                    scrollToBottom();
+
+                    let letterIndex = 0;
+                    function typeInputLetter() {
+                        if (letterIndex < item.text.length) {
+                            textSpan.textContent += item.text.charAt(letterIndex);
+                            letterIndex++;
+                            setTimeout(typeInputLetter, 55);
+                        } else {
+                            setTimeout(() => runSequence(index + 1), 300);
+                        }
+                    }
+                    typeInputLetter();
+                }
+                else if (item.type === "json") {
+                    const pre = document.createElement("pre");
+                    pre.style.color = "var(--accent)";
+                    pre.style.fontSize = "0.8rem";
+                    pre.style.margin = "0.5rem 0";
+                    pre.style.fontFamily = "var(--font-mono)";
+                    pre.textContent = item.text;
+                    lineDiv.appendChild(pre);
+                    terminalBody.appendChild(lineDiv);
+                    scrollToBottom();
+                    setTimeout(() => runSequence(index + 1), 600);
+                }
+                else {
+                    // Standard log line
+                    if (item.text.startsWith("[PASS]")) {
+                        const passSpan = document.createElement("span");
+                        passSpan.className = "text-terminal";
+                        passSpan.textContent = "[PASS]";
+                        lineDiv.appendChild(passSpan);
+
+                        const textSpan = document.createElement("span");
+                        textSpan.textContent = item.text.replace("[PASS]", "");
+                        lineDiv.appendChild(textSpan);
+                    } else if (item.text.startsWith("[+]")) {
+                        const plusSpan = document.createElement("span");
+                        plusSpan.className = "text-accent";
+                        plusSpan.textContent = "[+]";
+                        lineDiv.appendChild(plusSpan);
+
+                        const textSpan = document.createElement("span");
+                        textSpan.textContent = item.text.replace("[+]", "");
+                        lineDiv.appendChild(textSpan);
+                    } else {
+                        lineDiv.textContent = item.text;
+                    }
+
+                    terminalBody.appendChild(lineDiv);
+                    scrollToBottom();
+
+                    // Delay based on complexity
+                    let delay = 400;
+                    if (item.text.includes("Performing system integrity")) delay = 800;
+                    setTimeout(() => runSequence(index + 1), delay);
+                }
+            }
+
+            function scrollToBottom() {
+                terminalBody.scrollTop = terminalBody.scrollHeight;
+            }
+
+            // Kickoff typing simulation
+            setTimeout(typeCommand, 800);
+        });
+    </script>
 </body>
 
 </html>
